@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- doctype informa ao agente de usuário a verção do html que deve ser remderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Checkbox Lindão</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="César Augusto" />
+    <meta name="description" content="Lista de documentos" />
+    <meta name="keywords" content="html5, tecnologia" />
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      span {
+        border-radius: 10px;
+        width: 35px;
+        height: 15px;
+        background: rgb(197, 197, 197);
+        display: inline-block;
+        box-sizing: border-box;
+      }
+
+      body input {
+        height: 1px;
+        width: 1px;
+        border: 0;
+        display: inline-block;
+        opacity: 0;
+      }
+
+      input:checked + .chk {
+        background: #c5c5c5;
+        position: relative;
+        display: inline-block;
+      }
+
+      .chk::before {
+        content: '';
+        height: 13px;
+        width: 13px;
+        display: inline-block;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        margin: 1px;
+        transition: all 0.2s;
+      }
+
+      input:checked + .chk::before {
+        content: '';
+        height: 13px;
+        width: 13px;
+        display: inline-block;
+        background: red;
+        border-radius: 50%;
+        margin: 1px;
+        transform: translateX(20px);
+        transition: all 0.2s;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Checkbox Lindão</h1>
+
+    <label>
+      <input type="checkbox" />
+      <span class="chk"></span>
+      Esportes
+    </label>
+
+    <label>
+      <input type="checkbox" />
+      <span class="chk"></span>
+      Política
+    </label>
+
+    <label>
+      <input type="checkbox" />
+      <span class="chk"></span>
+      Educação
+    </label>
+  </body>
+</html>
